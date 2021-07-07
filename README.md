@@ -42,6 +42,7 @@ $ yarn dev (ou npm run dev)
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
 
+
 ### 🛠 Tecnologias Utilizadas
 
 As seguintes tecnologias foram utilizadas para a construção do projeto:
@@ -53,3 +54,8 @@ As seguintes tecnologias foram utilizadas para a construção do projeto:
 - [SQLite](https://www.sqlite.org/index.html)
 - [Material UI](https://material-ui.com/pt/)
 - [Yarn](https://yarnpkg.com/)
+
+### Usuários para acesso ao sistema
+- email: usuariocomum@teste.com.br | senha: employee
+- email: usarioadm@teste.com.br | senha: admin 
+- Obs: Os usuários podem ser editados, removidos e adicionados ao acessar a tela de usuários do sistema
