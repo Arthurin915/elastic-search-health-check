@@ -7,6 +7,8 @@ export interface IStatusInfo {
     status: string;
 }
 
+export interface IUsageChart { name: string, usage: number }
+
 export interface IUser {
     id: number;
     email: string;

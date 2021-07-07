@@ -1,39 +1,38 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  Tooltip,
+  XAxis,
+  YAxis
+} from "recharts";
 import CpuUsageChartProps from "./interfaces";
 
-const CpuUsageChart: React.FC<CpuUsageChartProps> = ({ labelsData, chartData }) => {
-  const data = {
-    labels: labelsData,
-    datasets: [
-      {
-        label: 'CPU Usage',
-        data: chartData,
-        fill: false,
-        backgroundColor: "rgb(255, 99, 132)",
-        borderColor: "rgba(255, 99, 132, 0.2)",
-      },
-    ],
-  };
-
-  const options = {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
-    },
-  };
+const CpuUsageChart: React.FC<CpuUsageChartProps> = ({ data }) => {
   return (
-    <>
+    <div>
       <div className="header">
         <h1 className="title">CPU Usage</h1>
       </div>
-      <Line data={data} options={options} type="" />
-    </>
+      <AreaChart
+        width={300}
+        height={400}
+        data={data}
+        margin={{
+          top: 10,
+          right: 30,
+          left: 0,
+          bottom: 0,
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Area type="monotone" dataKey="usage" stroke="#8884d8" fill="#8884d8" />
+      </AreaChart>
+    </div>
   );
 };
 

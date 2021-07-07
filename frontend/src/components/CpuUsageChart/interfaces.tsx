@@ -1,4 +1,5 @@
+import { IUsageChart } from "../../models";
+
 export default interface CpuUsageChartProps {
-    labelsData: string[];
-    chartData: number[];
+    data: IUsageChart[];
 }

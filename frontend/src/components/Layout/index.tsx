@@ -10,20 +10,18 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import BarChartIcon from "@material-ui/icons/BarChart";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import LockIcon from "@material-ui/icons/Lock";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import LayersIcon from "@material-ui/icons/Layers";
+import LockIcon from "@material-ui/icons/Lock";
 import MenuIcon from "@material-ui/icons/Menu";
-import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 import NetworkCheckIcon from "@material-ui/icons/NetworkCheck";
+import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 import clsx from "clsx";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/auth";
 import LayoutProps from "./interfaces";
 import { useStyles } from "./styles";
-import { Link } from "react-router-dom";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { logout, access_level } = useAuth();

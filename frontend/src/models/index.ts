@@ -3,6 +3,8 @@ export interface IUsageData {
     data: Array<number>;
 }
 
+export interface IUsageChart { name: string, usage: number }
+
 export interface IStatusInfo {
     status: string;
 }
@@ -13,3 +15,5 @@ export interface IUser {
     access_level: string;
     password: string;
 }
+
+export type IUserForm = Omit<IUser, "id">;
